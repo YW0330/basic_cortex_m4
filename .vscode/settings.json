@@ -1,0 +1,10 @@
+{
+    "cortex-debug.gdbPath.windows": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin\\arm-none-eabi-gdb.exe",
+    "cortex-debug.openocdPath.windows": "D:\\xpack-openocd-0.11.0-5\\bin\\openocd.exe",
+    "cortex-debug.armToolchainPath.windows": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin",
+    "files.associations": {
+        "stdint.h": "c",
+        "myusart.h": "c"
+    },
+    "cortex-debug.registerUseNaturalFormat": false
+}

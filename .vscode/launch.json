@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OpenOCD",
+            "type": "cortex-debug",
+            "cwd": "${workspaceRoot}",
+            "servertype": "openocd",
+            "request": "launch",
+            "executable": "dist/${fileBasenameNoExtension}.elf",
+            "targetId": "STM32F303ZE",
+            "configFiles": [
+                "D:\\xpack-openocd-0.11.0-5\\scripts\\interface\\stlink.cfg",
+                "D:\\xpack-openocd-0.11.0-5\\scripts\\board\\st_nucleo_f3.cfg"
+            ],
+            "armToolchainPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin",
+            "interface": "swd",
+            "svdFile": "STM32F303.svd",
+            "preLaunchTask": "arm-none-eabi-gcc 建置使用中檔案",
+            "postDebugTask": "清除建置完成的檔案"
+        }
+    ]
+}

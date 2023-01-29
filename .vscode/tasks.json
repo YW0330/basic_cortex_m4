@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "cmd.exe",
+                "args": [
+                    "/d",
+                    "/c",
+                    "D:\\cmder\\vendor\\bin\\vscode_init.cmd",
+                    "&&"
+                ]
+            }
+        }
+    },
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "arm-none-eabi-gcc 建置使用中檔案",
+            "linux": {
+                "command": "make",
+                "args": [
+                    "MODE=debug",
+                    "FILENAME=${fileBasenameNoExtension}"
+                ]
+            },
+            "windows": {
+                "command": "mingw32-make",
+                "args": [
+                    "MODE=debug",
+                    "FILENAME=${fileBasenameNoExtension}"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "detail": "偵錯工具產生的工作。"
+        },
+        {
+            "type": "shell",
+            "label": "清除建置完成的檔案",
+            "linux": {
+                "command": "make",
+                "args": [
+                    "clean",
+                ],
+            },
+            "windows": {
+                "command": "mingw32-make",
+                "args": [
+                    "clean",
+                ],
+            },
+            "detail": "清除建置後的執行檔與目標檔。"
+        }
+    ]
+}
