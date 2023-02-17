@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "myusart.h"
-#include "task_sheduler.h"
+#include "task_scheduler.h"
 
 void task1_handler(void);
 void task2_handler(void);
